@@ -1,0 +1,241 @@
+:root {
+    --a: blue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1{
+    font-size: 40px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+p, li, a{
+    color: rgb(35, 35, 35);
+    line-height: 1.7;
+}
+a:hover, .clr{
+    color: var(--a);
+}
+a, button{
+    font-weight: 500;
+}
+button{
+    display: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--a);
+}
+.logo>img{
+    width: 50px;
+}
+section, .card{
+    background-color: rgb(240, 240, 240);
+}
+section{
+    border-left: 2px solid var(--a);
+}
+section, .card, footer>div{
+    padding:20px;
+}
+.pc, footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+header, main, footer, .div{
+    /* width: min(1900px, 100%); */
+    width: min(1300px, 100%);
+    padding: 10px 20px;
+}
+header{
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+
+
+
+body, section, .card, footer>div{
+    width: 100%;
+}
+body, section, aside, footer>div, .card, footer>div>ul, article, .clm{
+    flex-direction: column;
+    gap: 20px;
+}
+body, section, .card, footer>div, aside, main, header, ul, ol, .logo, nav, .div, article, .clm{
+    display: flex;
+}
+body, header, .logo{
+    align-items: center;
+}
+.logo, nav>ul, footer>div>ul{
+    gap: 10px;
+}
+nav>ul, footer>div>ul{
+    list-style: none;
+}
+nav>ul{
+    gap: 40px;
+}
+article{
+    padding: 20px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 5px;
+    
+}
+main, .div{
+    align-items: flex-start;
+    gap: 20px;
+}
+main>div, .div>div, article{
+    width: min(1490px, 100%);
+}
+aside{
+    width: min(400px, 100%);
+}
+
+footer{
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgb(190, 190, 190);
+}
+
+footer>div{
+    margin:20px 0;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 5px;
+}
+
+
+@media(max-width:768px) {
+    button {
+        display: block;
+    }
+
+    header>nav>ul {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 70px;
+        right: 0;
+        background-color: #f4f4f4ec;
+        z-index: 9;
+        border-bottom: 2px solid var(--a);
+    }
+
+    header>nav>ul.show {
+        display: flex;
+    }
+
+    main, .div {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:425px) {
+
+    footer,.pc {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+article>ul, section>ul{
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 50px;
+}
+
+
+
+/* ReEditable Styling for on deamand ing Objects or Elements / tags */
+.card{
+    gap: 25px;
+}
+.card>button{
+    display: block;
+    font-size: 16px;
+    padding: 15px 10px;
+}
+.fld, .result{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.result{
+    background-color: rgb(221, 221, 221);
+    padding: 20px ;
+    border-radius: 5px;
+}
+.input{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+input, select{
+    width: 100%;
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+    font-weight: 500;
+    border-radius:5px;
+    
+}
+
+
+.results{
+    width: 100%;
+    padding: 20px;
+}
+
+
+table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border-collapse: collapse;
+    overflow: hidden;
+    border: 1px solid rgb(190, 190, 190);
+}
+
+thead {
+    background: rgb(228, 244, 255);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid rgb(190, 190, 190);
+}
+
+th {
+    letter-spacing: 1px;
+}
+
+td {
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.05);
+}
